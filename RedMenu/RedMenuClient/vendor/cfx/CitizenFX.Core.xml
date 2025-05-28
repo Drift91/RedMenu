@@ -7736,10 +7736,15 @@
             DELETE_RESOURCE_KVP
             </summary>
         </member>
-        <member name="F:CitizenFX.Core.Native.Hash.DELETE_ROPE">
+        <member name="F:CitizenFX.Core.Native.Hash.DELETE_RESOURCE_KVP_NO_SYNC">
             <summary>
             DELETE_RESOURCE_KVP
             </summary>
+            <summary>
+            Nonsynchronous [DELETE_RESOURCE_KVP](#\_0x7389B5DF) operation; see [FLUSH_RESOURCE_KVP](#\_0x5240DA5A).
+            </summary>
+        </member>
+        <member name="F:CitizenFX.Core.Native.Hash.DELETE_ROPE">
             <summary>
             DELETE_ROPE
             </summary>
@@ -9785,16 +9790,16 @@
         </member>
         <member name="F:CitizenFX.Core.Native.Hash.GET_PLAYER_FROM_SERVER_ID">
             <summary>
-            GET_PLAYER_FROM_SERVER_ID
-            </summary>
-        </member>
-        <member name="F:CitizenFX.Core.Native.Hash.GET_PLAYER_FROM_STATE_BAG_NAME">
-            <summary>
             Gets a local client's Player ID from its server ID counterpart, assuming the passed `serverId` exists on the client.
             
             If no matching client is found, or an invalid value is passed over as the `serverId` native's parameter, the native result will be `-1`.
             
             It's worth noting that this native method can only retrieve information about clients that are culled to the connected client.
+            </summary>
+        </member>
+        <member name="F:CitizenFX.Core.Native.Hash.GET_PLAYER_FROM_STATE_BAG_NAME">
+            <summary>
+            GET_PLAYER_FROM_SERVER_ID
             </summary>
             <summary>
             On the server this will return the players source, on the client it will return the player handle.
@@ -9998,30 +10003,30 @@
             GET_RESOURCE_KVP_FLOAT
             </summary>
             <summary>
-            GET_RESOURCE_KVP_INT
+            A getter for [SET_RESOURCE_KVP_INT](#\_0x6A2B1E8).
             </summary>
         </member>
         <member name="F:CitizenFX.Core.Native.Hash.GET_RESOURCE_KVP_STRING">
             <summary>
-            A getter for [SET_RESOURCE_KVP_INT](#\_0x6A2B1E8).
+            GET_RESOURCE_KVP_INT
             </summary>
             <summary>
-            A getter for [SET_RESOURCE_KVP](#\_0x21C7A35B).
+            GET_RESOURCE_KVP_STRING
             </summary>
         </member>
         <member name="F:CitizenFX.Core.Native.Hash.GET_RESOURCE_METADATA">
             <summary>
-            GET_RESOURCE_KVP_STRING
+            A getter for [SET_RESOURCE_KVP](#\_0x21C7A35B).
             </summary>
             <summary>
             Gets the metadata value at a specified key/index from a resource's manifest.
-            See also: [Resource manifest](https://docs.fivem.net/docs/scripting-reference/resource-manifest/resource-manifest/)
+            See also: [Resource manifest](https://docs.fivem.net/resources/manifest/)
             </summary>
         </member>
         <member name="F:CitizenFX.Core.Native.Hash.GET_RESOURCE_STATE">
             <summary>
             Gets the metadata value at a specified key/index from a resource's manifest.
-            See also: [Resource manifest](https://docs.fivem.net/resources/manifest/)
+            See also: [Resource manifest](https://docs.fivem.net/docs/scripting-reference/resource-manifest/resource-manifest/)
             </summary>
             <summary>
             Returns the current state of the specified resource.
@@ -13214,7 +13219,7 @@
             <summary>
             Registered commands can be executed by entering them in the client console (this works for client side and server side registered commands). Or by entering them in the server console/through an RCON client (only works for server side registered commands). Or if you use a supported chat resource, like the default one provided in the cfx-server-data repository, then you can enter the command in chat by prefixing it with a `/`.
             
-            Commands registered using this function can also be executed by resources, using the [`ExecuteCommand` native](#\_0x561C060B).
+            Commands registered using this function can also be executed by resources, using the [`ExecuteCommand` native](#_0x561C060B).
             
             The restricted bool is not used on the client side. Permissions can only be checked on the server side, so if you want to limit your command with an ace permission automatically, make it a server command (by registering it in a server script).
             
@@ -13227,7 +13232,7 @@
             <summary>
             Registered commands can be executed by entering them in the client console (this works for client side and server side registered commands). Or by entering them in the server console/through an RCON client (only works for server side registered commands). Or if you use a supported chat resource, like the default one provided in the cfx-server-data repository, then you can enter the command in chat by prefixing it with a `/`.
             
-            Commands registered using this function can also be executed by resources, using the [`ExecuteCommand` native](#_0x561C060B).
+            Commands registered using this function can also be executed by resources, using the [`ExecuteCommand` native](#\_0x561C060B).
             
             The restricted bool is not used on the client side. Permissions can only be checked on the server side, so if you want to limit your command with an ace permission automatically, make it a server command (by registering it in a server script).
             
@@ -15850,29 +15855,44 @@
         </member>
         <member name="F:CitizenFX.Core.Native.Hash.SET_RESOURCE_KVP">
             <summary>
-            A setter for [GET_RESOURCE_KVP_STRING](#\_0x5240DA5A).
+            SET_RESOURCE_KVP
             </summary>
         </member>
         <member name="F:CitizenFX.Core.Native.Hash.SET_RESOURCE_KVP_FLOAT">
             <summary>
-            SET_RESOURCE_KVP
+            A setter for [GET_RESOURCE_KVP_STRING](#\_0x5240DA5A).
             </summary>
             <summary>
+            SET_RESOURCE_KVP_FLOAT
+            </summary>
+        </member>
+        <member name="F:CitizenFX.Core.Native.Hash.SET_RESOURCE_KVP_FLOAT_NO_SYNC">
+            <summary>
             A setter for [GET_RESOURCE_KVP_FLOAT](#\_0x35BDCEEA).
+            </summary>
+            <summary>
+            Nonsynchronous [SET_RESOURCE_KVP_FLOAT](#\_0x9ADD2938) operation; see [FLUSH_RESOURCE_KVP](#\_0x5240DA5A).
             </summary>
         </member>
         <member name="F:CitizenFX.Core.Native.Hash.SET_RESOURCE_KVP_INT">
             <summary>
-            SET_RESOURCE_KVP_FLOAT
+            A setter for [GET_RESOURCE_KVP_INT](#\_0x557B586A).
             </summary>
+        </member>
+        <member name="F:CitizenFX.Core.Native.Hash.SET_RESOURCE_KVP_INT_NO_SYNC">
             <summary>
             SET_RESOURCE_KVP_INT
             </summary>
+            <summary>
+            Nonsynchronous [SET_RESOURCE_KVP_INT](#\_0x6A2B1E8) operation; see [FLUSH_RESOURCE_KVP](#\_0x5240DA5A).
+            </summary>
+        </member>
+        <member name="F:CitizenFX.Core.Native.Hash.SET_RESOURCE_KVP_NO_SYNC">
+            <summary>
+            Nonsynchronous [SET_RESOURCE_KVP](#\_0x21C7A35B) operation; see [FLUSH_RESOURCE_KVP](#\_0x5240DA5A).
+            </summary>
         </member>
         <member name="F:CitizenFX.Core.Native.Hash.SET_RICH_PRESENCE">
-            <summary>
-            A setter for [GET_RESOURCE_KVP_INT](#\_0x557B586A).
-            </summary>
             <summary>
             Sets the player's rich presence detail state for social platform providers to a specified string.
             </summary>
@@ -16043,12 +16063,12 @@
         </member>
         <member name="F:CitizenFX.Core.Native.Hash.SET_TEXT_FONT_FOR_CURRENT_COMMAND">
             <summary>
-            SET_TEXT_FONT_FOR_CURRENT_COMMAND
+            Sets the text font for the current text drawing command.
             </summary>
         </member>
         <member name="F:CitizenFX.Core.Native.Hash.SET_TEXT_JUSTIFICATION">
             <summary>
-            Sets the text font for the current text drawing command.
+            SET_TEXT_FONT_FOR_CURRENT_COMMAND
             </summary>
             <summary>
             SET_TEXT_JUSTIFICATION
@@ -26292,12 +26312,12 @@
             <summary>
             DELETE_FUNCTION_REFERENCE
             </summary>
-            <param name="referenceIdentity" />
         </member>
         <member name="M:CitizenFX.Core.Native.API.DeleteFunctionReference2(System.String)">
             <summary>
             DELETE_FUNCTION_REFERENCE
             </summary>
+            <param name="referenceIdentity" />
         </member>
         <member name="M:CitizenFX.Core.Native.API.DeleteIncident(System.Int32)">
             <summary>
@@ -26343,11 +26363,19 @@
             <summary>
             DELETE_RESOURCE_KVP
             </summary>
-            <param name="key" />
+            <param name="key">
+            The key to delete
+            </param>
         </member>
         <member name="M:CitizenFX.Core.Native.API.DeleteResourceKvp2(System.String)">
             <summary>
             DELETE_RESOURCE_KVP
+            </summary>
+            <param name="key" />
+        </member>
+        <member name="M:CitizenFX.Core.Native.API.DeleteResourceKvpNoSync(System.String)">
+            <summary>
+            Nonsynchronous [DELETE_RESOURCE_KVP](#\_0x7389B5DF) operation; see [FLUSH_RESOURCE_KVP](#\_0x5240DA5A).
             </summary>
             <param name="key">
             The key to delete
@@ -27265,12 +27293,12 @@
             <summary>
             DUPLICATE_FUNCTION_REFERENCE
             </summary>
-            <param name="referenceIdentity" />
         </member>
         <member name="M:CitizenFX.Core.Native.API.DuplicateFunctionReference2(System.String)">
             <summary>
             DUPLICATE_FUNCTION_REFERENCE
             </summary>
+            <param name="referenceIdentity" />
         </member>
         <member name="M:CitizenFX.Core.Native.API.EnableAttributeOverpower(System.Int32,System.Int32,System.Int32,System.Int32)">
             <summary>
@@ -27334,12 +27362,6 @@
             <summary>
             END_FIND_KVP
             </summary>
-            <param name="handle" />
-        </member>
-        <member name="M:CitizenFX.Core.Native.API.EndFindKvp2(System.Int32)">
-            <summary>
-            END_FIND_KVP
-            </summary>
             <param name="handle">
             The KVP find handle returned from [START_FIND_KVP](#\_0xDD379006)
             </param>
@@ -27347,27 +27369,33 @@
             None.
             </returns>
         </member>
+        <member name="M:CitizenFX.Core.Native.API.EndFindKvp2(System.Int32)">
+            <summary>
+            END_FIND_KVP
+            </summary>
+            <param name="handle" />
+        </member>
         <member name="M:CitizenFX.Core.Native.API.EndFindObject(System.Int32)">
             <summary>
             END_FIND_OBJECT
             </summary>
+            <param name="findHandle" />
         </member>
         <member name="M:CitizenFX.Core.Native.API.EndFindObject2(System.Int32)">
             <summary>
             END_FIND_OBJECT
             </summary>
-            <param name="findHandle" />
         </member>
         <member name="M:CitizenFX.Core.Native.API.EndFindPed(System.Int32)">
             <summary>
             END_FIND_PED
             </summary>
-            <param name="findHandle" />
         </member>
         <member name="M:CitizenFX.Core.Native.API.EndFindPed2(System.Int32)">
             <summary>
             END_FIND_PED
             </summary>
+            <param name="findHandle" />
         </member>
         <member name="M:CitizenFX.Core.Native.API.EndFindPickup(System.Int32)">
             <summary>
@@ -27486,37 +27514,37 @@
             <summary>
             This native is not implemented.
             </summary>
+            <param name="data" />
+            <param name="objectId" />
+            <param name="tree" />
         </member>
         <member name="M:CitizenFX.Core.Native.API.ExperimentalLoadCloneCreate2(System.String,System.Int32,System.String)">
             <summary>
             This native is not implemented.
             </summary>
-            <param name="data" />
-            <param name="objectId" />
-            <param name="tree" />
         </member>
         <member name="M:CitizenFX.Core.Native.API.ExperimentalLoadCloneSync(System.Int32,System.String)">
             <summary>
             This native is not implemented.
             </summary>
+            <param name="entity" />
+            <param name="data" />
         </member>
         <member name="M:CitizenFX.Core.Native.API.ExperimentalLoadCloneSync2(System.Int32,System.String)">
             <summary>
             This native is not implemented.
             </summary>
-            <param name="entity" />
-            <param name="data" />
         </member>
         <member name="M:CitizenFX.Core.Native.API.ExperimentalSaveCloneCreate(System.Int32)">
             <summary>
             This native is not implemented.
             </summary>
+            <param name="entity" />
         </member>
         <member name="M:CitizenFX.Core.Native.API.ExperimentalSaveCloneCreate2(System.Int32)">
             <summary>
             This native is not implemented.
             </summary>
-            <param name="entity" />
         </member>
         <member name="M:CitizenFX.Core.Native.API.ExperimentalSaveCloneSync(System.Int32)">
             <summary>
@@ -27614,12 +27642,12 @@
             <summary>
             FIND_FIRST_OBJECT
             </summary>
-            <param name="outEntity" />
         </member>
         <member name="M:CitizenFX.Core.Native.API.FindFirstObject2(System.Int32@)">
             <summary>
             FIND_FIRST_OBJECT
             </summary>
+            <param name="outEntity" />
         </member>
         <member name="M:CitizenFX.Core.Native.API.FindFirstPed(System.Int32@)">
             <summary>
@@ -27687,25 +27715,25 @@
             <summary>
             FIND_NEXT_PED
             </summary>
-            <param name="findHandle" />
-            <param name="outEntity" />
         </member>
         <member name="M:CitizenFX.Core.Native.API.FindNextPed2(System.Int32,System.Int32@)">
             <summary>
             FIND_NEXT_PED
             </summary>
+            <param name="findHandle" />
+            <param name="outEntity" />
         </member>
         <member name="M:CitizenFX.Core.Native.API.FindNextPickup(System.Int32,System.Int32@)">
             <summary>
             FIND_NEXT_PICKUP
             </summary>
-            <param name="findHandle" />
-            <param name="outEntity" />
         </member>
         <member name="M:CitizenFX.Core.Native.API.FindNextPickup2(System.Int32,System.Int32@)">
             <summary>
             FIND_NEXT_PICKUP
             </summary>
+            <param name="findHandle" />
+            <param name="outEntity" />
         </member>
         <member name="M:CitizenFX.Core.Native.API.FindNextVehicle(System.Int32,System.Int32@)">
             <summary>
@@ -30455,7 +30483,7 @@
         <member name="M:CitizenFX.Core.Native.API.GetNumResourceMetadata(System.String,System.String)">
             <summary>
             Gets the amount of metadata values with the specified key existing in the specified resource's manifest.
-            See also: [Resource manifest](https://docs.fivem.net/docs/scripting-reference/resource-manifest/resource-manifest/)
+            See also: [Resource manifest](https://docs.fivem.net/resources/manifest/)
             </summary>
             <param name="resourceName">
             The resource name.
@@ -30467,7 +30495,7 @@
         <member name="M:CitizenFX.Core.Native.API.GetNumResourceMetadata2(System.String,System.String)">
             <summary>
             Gets the amount of metadata values with the specified key existing in the specified resource's manifest.
-            See also: [Resource manifest](https://docs.fivem.net/resources/manifest/)
+            See also: [Resource manifest](https://docs.fivem.net/docs/scripting-reference/resource-manifest/resource-manifest/)
             </summary>
             <param name="resourceName">
             The resource name.
@@ -31066,6 +31094,12 @@
         </member>
         <member name="M:CitizenFX.Core.Native.API.GetPlayerFromServerId(System.Int32)">
             <summary>
+            GET_PLAYER_FROM_SERVER_ID
+            </summary>
+            <param name="serverId" />
+        </member>
+        <member name="M:CitizenFX.Core.Native.API.GetPlayerFromServerId2(System.Int32)">
+            <summary>
             Gets a local client's Player ID from its server ID counterpart, assuming the passed `serverId` exists on the client.
             If no matching client is found, or an invalid value is passed over as the `serverId` native's parameter, the native result will be `-1`.
             It's worth noting that this native method can only retrieve information about clients that are culled to the connected client.
@@ -31076,12 +31110,6 @@
             <returns>
             A valid Player ID if one is found, `-1` if not.
             </returns>
-        </member>
-        <member name="M:CitizenFX.Core.Native.API.GetPlayerFromServerId2(System.Int32)">
-            <summary>
-            GET_PLAYER_FROM_SERVER_ID
-            </summary>
-            <param name="serverId" />
         </member>
         <member name="M:CitizenFX.Core.Native.API.GetPlayerFromStateBagName(System.String)">
             <summary>
@@ -31151,12 +31179,12 @@
             <summary>
             GET_PLAYER_SERVER_ID
             </summary>
-            <param name="player" />
         </member>
         <member name="M:CitizenFX.Core.Native.API.GetPlayerServerId2(System.Int32)">
             <summary>
             GET_PLAYER_SERVER_ID
             </summary>
+            <param name="player" />
         </member>
         <member name="M:CitizenFX.Core.Native.API.GetPlayerTargetEntity(System.Int32,System.Int32@)">
             <summary>
@@ -31404,14 +31432,10 @@
             ```
             [
             {
-            "name": "cmdlist",
-            "resource": "resource",
-            "arity" = -1,
+            "name": "cmdlist"
             },
             {
             "name": "command1"
-            "resource": "resource_2",
-            "arity" = -1,
             }
             ]
             ```
@@ -31427,10 +31451,14 @@
             ```
             [
             {
-            "name": "cmdlist"
+            "name": "cmdlist",
+            "resource": "resource",
+            "arity" = -1,
             },
             {
             "name": "command1"
+            "resource": "resource_2",
+            "arity" = -1,
             }
             ]
             ```
@@ -31470,18 +31498,18 @@
             <summary>
             GET_RESOURCE_BY_FIND_INDEX
             </summary>
+            <param name="findIndex" />
+        </member>
+        <member name="M:CitizenFX.Core.Native.API.GetResourceByFindIndex2(System.Int32)">
+            <summary>
+            GET_RESOURCE_BY_FIND_INDEX
+            </summary>
             <param name="findIndex">
             The index of the resource (starting at 0)
             </param>
             <returns>
             The resource name as a `string`
             </returns>
-        </member>
-        <member name="M:CitizenFX.Core.Native.API.GetResourceByFindIndex2(System.Int32)">
-            <summary>
-            GET_RESOURCE_BY_FIND_INDEX
-            </summary>
-            <param name="findIndex" />
         </member>
         <member name="M:CitizenFX.Core.Native.API.GetResourceCommands(System.String)">
             <summary>
@@ -31508,12 +31536,6 @@
         </member>
         <member name="M:CitizenFX.Core.Native.API.GetResourceKvpFloat(System.String)">
             <summary>
-            GET_RESOURCE_KVP_FLOAT
-            </summary>
-            <param name="key" />
-        </member>
-        <member name="M:CitizenFX.Core.Native.API.GetResourceKvpFloat2(System.String)">
-            <summary>
             A getter for [SET_RESOURCE_KVP_FLOAT](#\_0x9ADD2938).
             </summary>
             <param name="key">
@@ -31523,7 +31545,19 @@
             The floating-point value stored under the specified key, or 0.0 if not found.
             </returns>
         </member>
+        <member name="M:CitizenFX.Core.Native.API.GetResourceKvpFloat2(System.String)">
+            <summary>
+            GET_RESOURCE_KVP_FLOAT
+            </summary>
+            <param name="key" />
+        </member>
         <member name="M:CitizenFX.Core.Native.API.GetResourceKvpInt(System.String)">
+            <summary>
+            GET_RESOURCE_KVP_INT
+            </summary>
+            <param name="key" />
+        </member>
+        <member name="M:CitizenFX.Core.Native.API.GetResourceKvpInt2(System.String)">
             <summary>
             A getter for [SET_RESOURCE_KVP_INT](#\_0x6A2B1E8).
             </summary>
@@ -31534,19 +31568,7 @@
             The integer value stored under the specified key, or 0 if not found.
             </returns>
         </member>
-        <member name="M:CitizenFX.Core.Native.API.GetResourceKvpInt2(System.String)">
-            <summary>
-            GET_RESOURCE_KVP_INT
-            </summary>
-            <param name="key" />
-        </member>
         <member name="M:CitizenFX.Core.Native.API.GetResourceKvpString(System.String)">
-            <summary>
-            GET_RESOURCE_KVP_STRING
-            </summary>
-            <param name="key" />
-        </member>
-        <member name="M:CitizenFX.Core.Native.API.GetResourceKvpString2(System.String)">
             <summary>
             A getter for [SET_RESOURCE_KVP](#\_0x21C7A35B).
             </summary>
@@ -31557,22 +31579,13 @@
             The string value stored under the specified key, or nil/null if not found.
             </returns>
         </member>
-        <member name="M:CitizenFX.Core.Native.API.GetResourceMetadata(System.String,System.String,System.Int32)">
+        <member name="M:CitizenFX.Core.Native.API.GetResourceKvpString2(System.String)">
             <summary>
-            Gets the metadata value at a specified key/index from a resource's manifest.
-            See also: [Resource manifest](https://docs.fivem.net/resources/manifest/)
+            GET_RESOURCE_KVP_STRING
             </summary>
-            <param name="resourceName">
-            The resource name.
-            </param>
-            <param name="metadataKey">
-            The key in the resource manifest.
-            </param>
-            <param name="index">
-            The value index, in a range from [0..GET_NUM_RESOURCE_METDATA-1].
-            </param>
+            <param name="key" />
         </member>
-        <member name="M:CitizenFX.Core.Native.API.GetResourceMetadata2(System.String,System.String,System.Int32)">
+        <member name="M:CitizenFX.Core.Native.API.GetResourceMetadata(System.String,System.String,System.Int32)">
             <summary>
             Gets the metadata value at a specified key/index from a resource's manifest.
             See also: [Resource manifest](https://docs.fivem.net/docs/scripting-reference/resource-manifest/resource-manifest/)
@@ -31585,6 +31598,21 @@
             </param>
             <param name="index">
             The value index, in a range from \[0..GET_NUM_RESOURCE_METDATA-1].
+            </param>
+        </member>
+        <member name="M:CitizenFX.Core.Native.API.GetResourceMetadata2(System.String,System.String,System.Int32)">
+            <summary>
+            Gets the metadata value at a specified key/index from a resource's manifest.
+            See also: [Resource manifest](https://docs.fivem.net/resources/manifest/)
+            </summary>
+            <param name="resourceName">
+            The resource name.
+            </param>
+            <param name="metadataKey">
+            The key in the resource manifest.
+            </param>
+            <param name="index">
+            The value index, in a range from [0..GET_NUM_RESOURCE_METDATA-1].
             </param>
         </member>
         <member name="M:CitizenFX.Core.Native.API.GetResourceState(System.String)">
@@ -33389,12 +33417,12 @@
             <summary>
             IS_ACE_ALLOWED
             </summary>
+            <param name="_object" />
         </member>
         <member name="M:CitizenFX.Core.Native.API.IsAceAllowed2(System.String)">
             <summary>
             IS_ACE_ALLOWED
             </summary>
-            <param name="_object" />
         </member>
         <member name="M:CitizenFX.Core.Native.API.IsAmbientSpeechDisabled(System.Int32)">
             <summary>
@@ -35632,13 +35660,13 @@
             <summary>
             IS_PRINCIPAL_ACE_ALLOWED
             </summary>
-            <param name="principal" />
-            <param name="_object" />
         </member>
         <member name="M:CitizenFX.Core.Native.API.IsPrincipalAceAllowed2(System.String,System.String)">
             <summary>
             IS_PRINCIPAL_ACE_ALLOWED
             </summary>
+            <param name="principal" />
+            <param name="_object" />
         </member>
         <member name="M:CitizenFX.Core.Native.API.IsProjectileInArea(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Boolean)">
             <summary>
@@ -88517,11 +88545,11 @@
             <param name="keymapName">
             A **unique** name that the keymap will be bound to, duplicates will result in the keymap not being registered.
             </param>
-            <param name="onKeyUp">
-            The function to run when the key is no longer being pressed.
-            </param>
             <param name="onKeyDown">
-            The function to run when the key is being pressed.
+            The function to run when the key is being pressed, or `nil`.
+            </param>
+            <param name="onKeyUp">
+            The function to run when the key is no longer being pressed, or `nil`.
             </param>
             <param name="rawKeyIndex">
             The virtual key to bind this keymap to, see a list [here](https://learn.microsoft.com/en-us/windows/win32/inputdev/virtual-key-codes)
@@ -91284,14 +91312,14 @@
             <summary>
             This native sets the app id for the discord rich presence implementation.
             </summary>
+            <param name="appId">
+            A valid Discord API App Id, can be generated at https://discordapp.com/developers/applications/
+            </param>
         </member>
         <member name="M:CitizenFX.Core.Native.API.SetDiscordAppId2(System.String)">
             <summary>
             This native sets the app id for the discord rich presence implementation.
             </summary>
-            <param name="appId">
-            A valid Discord API App Id, can be generated at https://discordapp.com/developers/applications/
-            </param>
         </member>
         <member name="M:CitizenFX.Core.Native.API.SetDiscordRichPresenceAction(System.Int32,System.String,System.String)">
             <summary>
@@ -92875,19 +92903,19 @@
         </member>
         <member name="M:CitizenFX.Core.Native.API.SetMillisecondsPerGameMinute(System.Int32)">
             <summary>
-            _SET_MILLISECONDS_PER_GAME_MINUTE
-            </summary>
-            <param name="ms">
-            :
-            </param>
-        </member>
-        <member name="M:CitizenFX.Core.Native.API.SetMillisecondsPerGameMinute2(System.Int32)">
-            <summary>
             Overrides how many real ms are equal to one game minute.
             A setter for [`GetMillisecondsPerGameMinute`](#_0x2F8B4D1C595B11DB).
             </summary>
             <param name="_value">
             Milliseconds.
+            </param>
+        </member>
+        <member name="M:CitizenFX.Core.Native.API.SetMillisecondsPerGameMinute2(System.Int32)">
+            <summary>
+            _SET_MILLISECONDS_PER_GAME_MINUTE
+            </summary>
+            <param name="ms">
+            :
             </param>
         </member>
         <member name="M:CitizenFX.Core.Native.API.SetMinimapHideFow(System.Boolean)">
@@ -95183,6 +95211,13 @@
         </member>
         <member name="M:CitizenFX.Core.Native.API.SetResourceKvpFloat(System.String,System.Single)">
             <summary>
+            SET_RESOURCE_KVP_FLOAT
+            </summary>
+            <param name="key" />
+            <param name="_value" />
+        </member>
+        <member name="M:CitizenFX.Core.Native.API.SetResourceKvpFloat2(System.String,System.Single)">
+            <summary>
             A setter for [GET_RESOURCE_KVP_FLOAT](#\_0x35BDCEEA).
             </summary>
             <param name="key">
@@ -95192,23 +95227,49 @@
             The value to write
             </param>
         </member>
-        <member name="M:CitizenFX.Core.Native.API.SetResourceKvpFloat2(System.String,System.Single)">
+        <member name="M:CitizenFX.Core.Native.API.SetResourceKvpFloatNoSync(System.String,System.Single)">
             <summary>
-            SET_RESOURCE_KVP_FLOAT
+            Nonsynchronous [SET_RESOURCE_KVP_FLOAT](#\_0x9ADD2938) operation; see [FLUSH_RESOURCE_KVP](#\_0x5240DA5A).
             </summary>
-            <param name="key" />
-            <param name="_value" />
+            <param name="key">
+            The key to set
+            </param>
+            <param name="_value">
+            The value to write
+            </param>
         </member>
         <member name="M:CitizenFX.Core.Native.API.SetResourceKvpInt(System.String,System.Int32)">
+            <summary>
+            A setter for [GET_RESOURCE_KVP_INT](#\_0x557B586A).
+            </summary>
+            <param name="key">
+            The key to set
+            </param>
+            <param name="_value">
+            The value to write
+            </param>
+        </member>
+        <member name="M:CitizenFX.Core.Native.API.SetResourceKvpInt2(System.String,System.Int32)">
             <summary>
             SET_RESOURCE_KVP_INT
             </summary>
             <param name="key" />
             <param name="_value" />
         </member>
-        <member name="M:CitizenFX.Core.Native.API.SetResourceKvpInt2(System.String,System.Int32)">
+        <member name="M:CitizenFX.Core.Native.API.SetResourceKvpIntNoSync(System.String,System.Int32)">
             <summary>
-            A setter for [GET_RESOURCE_KVP_INT](#\_0x557B586A).
+            Nonsynchronous [SET_RESOURCE_KVP_INT](#\_0x6A2B1E8) operation; see [FLUSH_RESOURCE_KVP](#\_0x5240DA5A).
+            </summary>
+            <param name="key">
+            The key to set
+            </param>
+            <param name="_value">
+            The value to write
+            </param>
+        </member>
+        <member name="M:CitizenFX.Core.Native.API.SetResourceKvpNoSync(System.String,System.String)">
+            <summary>
+            Nonsynchronous [SET_RESOURCE_KVP](#\_0x21C7A35B) operation; see [FLUSH_RESOURCE_KVP](#\_0x5240DA5A).
             </summary>
             <param name="key">
             The key to set
@@ -95508,14 +95569,14 @@
             <summary>
             SET_SNAKEOIL_FOR_ENTRY
             </summary>
+            <param name="name" />
+            <param name="path" />
+            <param name="data" />
         </member>
         <member name="M:CitizenFX.Core.Native.API.SetSnakeoilForEntry2(System.String,System.String,System.String)">
             <summary>
             SET_SNAKEOIL_FOR_ENTRY
             </summary>
-            <param name="name" />
-            <param name="path" />
-            <param name="data" />
         </member>
         <member name="M:CitizenFX.Core.Native.API.SetSpawnerInfoPriority(System.UInt32,System.UInt32,System.Int32)">
             <summary>
@@ -95681,12 +95742,12 @@
             <summary>
             SET_TEXT_CHAT_ENABLED
             </summary>
-            <param name="enabled" />
         </member>
         <member name="M:CitizenFX.Core.Native.API.SetTextChatEnabled2(System.Boolean)">
             <summary>
             SET_TEXT_CHAT_ENABLED
             </summary>
+            <param name="enabled" />
         </member>
         <member name="M:CitizenFX.Core.Native.API.SetTextColor(System.Int32,System.Int32,System.Int32,System.Int32)">
             <summary>
@@ -104048,16 +104109,21 @@
             <summary>
             The backing function for TriggerEvent.
             </summary>
-            <param name="eventName" />
-            <param name="eventPayload" />
-            <param name="payloadLength" />
         </member>
         <member name="M:CitizenFX.Core.Native.API.TriggerEventInternal2(System.String,System.String,System.Int32)">
             <summary>
             The backing function for TriggerEvent.
             </summary>
+            <param name="eventName" />
+            <param name="eventPayload" />
+            <param name="payloadLength" />
         </member>
         <member name="M:CitizenFX.Core.Native.API.TriggerLatentServerEventInternal(System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            The backing function for TriggerLatentServerEvent.
+            </summary>
+        </member>
+        <member name="M:CitizenFX.Core.Native.API.TriggerLatentServerEventInternal2(System.String,System.String,System.Int32,System.Int32)">
             <summary>
             The backing function for TriggerLatentServerEvent.
             </summary>
@@ -104065,11 +104131,6 @@
             <param name="eventPayload" />
             <param name="payloadLength" />
             <param name="bps" />
-        </member>
-        <member name="M:CitizenFX.Core.Native.API.TriggerLatentServerEventInternal2(System.String,System.String,System.Int32,System.Int32)">
-            <summary>
-            The backing function for TriggerLatentServerEvent.
-            </summary>
         </member>
         <member name="M:CitizenFX.Core.Native.API.TriggerMusicEvent(System.String)">
             <summary>
