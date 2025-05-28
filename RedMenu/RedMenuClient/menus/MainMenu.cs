@@ -16,12 +16,26 @@ namespace RedMenuClient.menus
     {
         private static Menu mainMenu = new Menu("RedMenu", "Welcome to RedMenu!");
         private static bool setupDone = false;
+        public static int MenuToggleKey { get; private set; } = 0x70; // F1
 
         private static void SetupMenu()
         {
             if (setupDone) return;
             setupDone = true;
             mainMenu.MenuTitle = GetPlayerName(PlayerId());
+
+            MenuController.MenuToggleKey = (Control)(0); // disables the menu toggle key
+            RegisterRawKeymap("RedMenu:MenuToggle", new Action(() =>
+            {
+                if (!MenuController.IsAnyMenuOpen())
+                {
+                    mainMenu.OpenMenu();
+                }
+                else
+                {
+                    MenuController.CloseAllMenus();
+                }
+            }), null, MenuToggleKey, false);
 
             MenuController.AddMenu(mainMenu);
 
